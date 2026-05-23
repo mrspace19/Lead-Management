@@ -41,4 +41,12 @@ Visitor fills form → Sees thank-you page
 
 ---
 
+## Screenshots
+
+### Lead Form
+![Lead Form](screenshots/lead-form.png)
+
+### Admin Dashboard
+![Dashboard](screenshots/dashboard.png)
+
 > For setup and technical details, refer to the `README.md` inside the `lead-management-server` and `lead-management-client` folders.
