@@ -1,0 +1,11 @@
+.dash-footer {
+  padding: 16px 28px;
+  border-top: 1px solid var(--clr-border-soft);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.78rem;
+  color: var(--clr-text-dim);
+}
+
+.footer-sep { color: var(--clr-border); }

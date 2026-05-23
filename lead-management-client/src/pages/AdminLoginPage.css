@@ -1,0 +1,194 @@
+.al-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 16px;
+  position: relative;
+  overflow: hidden;
+  background: var(--clr-bg);
+}
+
+.al-orb {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(100px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.al-orb-1 {
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(108,99,255,0.15) 0%, transparent 70%);
+  top: -200px;
+  left: -100px;
+}
+
+.al-orb-2 {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(167,139,250,0.1) 0%, transparent 70%);
+  bottom: -100px;
+  right: -100px;
+}
+
+.al-wrapper {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  width: 100%;
+  max-width: 880px;
+  background: var(--clr-surface);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+/* Brand panel */
+.al-brand {
+  flex: 0 0 340px;
+  background: linear-gradient(150deg, rgba(108,99,255,0.2) 0%, rgba(108,99,255,0.05) 100%);
+  border-right: 1px solid var(--clr-border);
+  padding: 48px 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.al-brand-logo {
+  margin-bottom: 20px;
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+.al-brand-name {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  color: var(--clr-text);
+  margin-bottom: 4px;
+}
+
+.al-brand-tagline {
+  color: var(--clr-accent-2);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.al-features {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.al-feature {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--clr-text-muted);
+  font-size: 0.9rem;
+}
+
+.al-feature-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--clr-accent);
+  flex-shrink: 0;
+  box-shadow: 0 0 8px var(--clr-accent);
+}
+
+/* Login card */
+.al-card {
+  flex: 1;
+  padding: 48px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.al-card-header {
+  margin-bottom: 32px;
+}
+
+.al-title {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  color: var(--clr-text);
+  margin-bottom: 6px;
+}
+
+.al-subtitle {
+  color: var(--clr-text-muted);
+  font-size: 0.92rem;
+}
+
+.al-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.al-input-wrap {
+  position: relative;
+}
+
+.al-input-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--clr-text-dim);
+  pointer-events: none;
+}
+
+.al-input {
+  padding-left: 40px !important;
+}
+
+.al-eye-btn {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--clr-text-dim);
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  transition: color var(--transition);
+}
+
+.al-eye-btn:hover { color: var(--clr-text-muted); }
+
+.al-submit {
+  width: 100%;
+  padding: 14px;
+  font-size: 1rem;
+  margin-top: 4px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 720px) {
+  .al-wrapper {
+    flex-direction: column;
+    max-width: 440px;
+  }
+
+  .al-brand {
+    flex: none;
+    border-right: none;
+    border-bottom: 1px solid var(--clr-border);
+    padding: 32px 28px;
+  }
+
+  .al-features { display: none; }
+
+  .al-card {
+    padding: 32px 28px;
+  }
+}
